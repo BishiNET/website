@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes animatedBackground {
+            from {
+                background-position: 100% 0;
+            }
+
+            to {
+                background-position: 0 0;
+            }
+        }
+
+        @keyframes freedomani {
+
+            0%,
+            16.667%,
+            to {
+                opacity: 1
+            }
+
+            33.333%,
+            83.333% {
+                opacity: 0
+            }
+
+        }
+
+
+        @keyframes forani {
+
+            0%,
+            to {
+                opacity: 0
+            }
+
+            33.333%,
+            50% {
+                opacity: 1
+            }
+
+            16.667%,
+            66.667% {
+                opacity: 0
+            }
+
+        }
+
+        @keyframes allani {
+
+            0%,
+            50%,
+            to {
+                opacity: 0
+            }
+
+            66.667%,
+            83.333% {
+                opacity: 1
+            }
+        }
+
+        #logo {
+            font-size: 1.26rem;
+            font-family: 'Roboto';
+            background-image: url(bg.png);
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            animation: animatedBackground 15s linear infinite alternate;
+        }
+
+        #freedom:before {
+            -webkit-text-fill-color: transparent;
+        }
+
+        #for:before {
+            -webkit-text-fill-color: transparent;
+        }
+
+        #all:before {
+            -webkit-text-fill-color: transparent;
+        }
+
+        #freedom {
+            z-index: 100;
+            position: relative;
+            animation: freedomani 8s infinite;
+        }
+
+        #for {
+            z-index: 100;
+            position: relative;
+            animation: forani 8s infinite;
+        }
+
+        #all {
+            z-index: 100;
+            position: relative;
+            animation: allani 8s infinite;
+        }
+
+        #button {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w-full antialiased container flex justify-center	items-center h-screen flex-col">
+
+        <div class="w-full flex flex-col  justify-center	items-center  ">
+            <img src="logo.png">
+            
+        
+        </div>
+        <div class="flex lg:flex-row flex-col lg:gap-x-10  pt-5 text-[5rem] items-center">
+            <div style="font-family: 'Roboto'; "
+                class="leading-[1] before:content-['Freedom'] before:text-center before:z-0 before:text-black/80 before:block before:absolute before:bg-clip-text">
+                <span class="bg-clip-text text-transparent  bg-gradient-to-r from-[#7928ca] to-[#ff0080]"
+                    id="freedom">Freedom</span>
+            </div>
+
+            <div style="font-family: 'Roboto'; "
+                class="leading-[1] before:content-['for'] before:text-center before:z-0 before:block before:text-black/80  before:absolute before:bg-clip-text">
+                <span class="bg-clip-text text-transparent  bg-gradient-to-r from-[#ff0080] to-rose-500"
+                    id="for">for</span>
+            </div>
+
+            <div style="font-family: 'Roboto'; "
+                class="leading-[1] before:content-['All'] before:text-center before:z-0 before:block before:text-black/80 before:absolute before:bg-clip-text">
+                <span class="bg-clip-text text-transparent  bg-gradient-to-r from-rose-500 to-[#f9cb28]"
+                    id="all">All</span>
+            </div>
+        </div>
+
+        <div class="text-lg py-5 flex flex-col gap-y-5">
+            <span class="text-[#666] flex flex-row">A  <div id="logo" class="px-2 bg-clip-text text-transparent">
+                Cloud
+            </div> Connect Company</span>
+            <a id="button" href="mailto:ipmart@protonmail.com">Contact us</a>
+        </div>
+    </div>
+</body>
+
+</html>
